@@ -18,6 +18,19 @@ function setup(){
   const dx = width / scores.length;
   let px, py; // 線を引くために一つ前の点を覚えておく変数
   for(let i = 0; i < scores.length; i++){
-    // BLANK[1]
+   px = i * dx +6;
+   py = height - (height*scores[i]/100);
+   
+   x = (i+1) * dx + 6;
+   y = height - (height * scores[i+1]/100);// BLANK[1]
+  
+   stroke(0);
+   strokeWeight(8);
+   point(px,py);
+   point(x,y);
+
+   stroke(0);
+   strokeWeight(2);
+   line(px,py,x,y);
   }
 }
